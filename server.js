@@ -32,7 +32,7 @@ app.post('/webhook/', function (req, res) {
       }, function(error, response, body) {
         try {
           var condition = body.main;
-          sendTextMessage(sender, "Today is " + condition.temp + " Celsius and " + "Moisture " + condition.humidity + " % at " + location);
+          sendTextMessage(sender, "อุณหภูมิวันนี้  " + condition.temp + " C และ " + "ความชื้น " + condition.humidity + " % ที่ " + location);
         } catch(err) {
           console.error('error caught', err);
           sendTextMessage(sender, "There was an error.");
@@ -42,7 +42,7 @@ app.post('/webhook/', function (req, res) {
         sendGenericMessage(sender)
         continue
       }
-      sendTextMessage(sender, 'Text received, echo: ' + text.substring(0, 200))
+      sendTextMessage(sender, 'เมืองของคุณคือ : ' + text.substring(0, 200))
     }
     if (event.postback) {
       let text = JSON.stringify(event.postback)
