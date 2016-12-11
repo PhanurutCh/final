@@ -46,7 +46,7 @@ app.post('/webhook/', function (req, res) {
     }
     if (event.postback) {
       let text = JSON.stringify(event.postback)
-      sendTextMessage(sender, 'กรุณาใส่ชื่อเมือง ' , token)
+      sendTextMessage(sender, 'กรุณาใส่ชื่อเมือง (ภาษาอังกฤษเท่านั้น) ' , token)
       continue
     }
   }
