@@ -35,7 +35,7 @@ app.post('/webhook/', function (req, res) {
           sendTextMessage(sender, "อุณหภูมิวันนี้  " + condition.temp + " C และ " + "ความชื้น " + condition.humidity + " % ที่ " + location);
         } catch(err) {
           console.error('error caught', err);
-          sendTextMessage(sender, "There was an error.");
+          sendTextMessage(sender, "ชื่อเมืองของคุณไม่ถูกต้อง");
         }
 })
       if (text === 'Generic') {
